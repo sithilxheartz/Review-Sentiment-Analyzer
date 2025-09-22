@@ -3,6 +3,7 @@
 The **Product Review Sentiment Analysis Model** is designed to automate the analysis of customer reviews for products on e-commerce websites. It utilizes machine learning techniques to classify sentiments (positive or negative) and provides businesses with actionable insights to improve product offerings and customer satisfaction.
 
 ![Product Review Sentiment](WebScreenShot.png)
+![Product Review Sentiment](WebScreenShot1.png)
 
 ---
 
