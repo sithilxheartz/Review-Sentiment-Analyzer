@@ -319,8 +319,8 @@ In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejo
             if (reviewText.trim() === "") {
                 errorMessage.textContent = "Review cannot be empty!";
                 return false;
-            } else if (reviewText.length < 10) {
-                errorMessage.textContent = "Review must be at least 10 characters long!";
+            } else if (reviewText.length < 20) {
+                errorMessage.textContent = "Review must be at least 20 characters long!";
                 return false;
             }
             return true;
