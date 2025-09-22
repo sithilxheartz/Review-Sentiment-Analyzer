@@ -229,121 +229,130 @@
             font-size: 12px;
             margin-top: 5px;
         }
+
+        .vertical-line {
+        border-left: 2px solid #000; /* Adjust thickness and color */
+        height: 100%;
+        margin-left: 20px; /* Adjust space around the line */
+        margin-right: 20px; /* Adjust space around the line */
+        }
+
     </style>
 </head>
 
-<body>
+    <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="../static/products/weblogo.png" alt="Daraz Logo" class="logo-image">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="🔍 Search for Products">
-        </div>
-        <div class="cart-icon">
-
-            <div class="quick-actions1">
-                <button class="add-to-cart">🛒 Cart</button>
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="../static/products/weblogo.png" alt="Daraz Logo" class="logo-image">
             </div>
-        </div>
-    </header>
-
-
-    <main>
-        <!-- Product Information Section -->
-        <div class="product-info">
-            <div class="product-image">
-                <img src="../static/products/product.jpg" alt="Product Image" id="product-image">
+            <div class="search-bar">
+                <input type="text" placeholder="🔍 Search for Products">
             </div>
-            <div class="product-details">
-                <h1>JBL Air-R03 Premium Quality Earbuds (with Free Silicone Case)</h1>
-                <p class="short-description">High-Quality Sounds & Bass Guaranteed.
-                    Large Capacity charging box.
-                    High Noise reduction value.
-                    Support IOS and Android Devices.
-                    In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejoice music with its
-                    Pure Bass, answer phone calls with reduced noise, and its dual connectivity is all you can expect
-                    from truly incredible cordless Headphones like JBL Air R03 With extended battery timings, you can
-                    enjoy your favorite music all day long, and JBL Air R03 offers Pure Bass, making it worth buying!
-                    Brand: JBL.</p>
-                <div class="price">Rs. 5999.00
+            <div class="cart-icon">
 
-                </div>
-                <div class="ratings">
-                    <span>⭐⭐⭐⭐⭐ (4.5/5)</span>
-                </div>
-                <div class="quick-actions">
-                    <button class="add-to-cart">Add to Cart</button>
-                    <button class="buy-now">Buy Now</button>
+                <div class="quick-actions1">
+                    <button class="add-to-cart">🛒 Cart</button>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <!-- Review Section -->
-        <div class="reviews">
-            <div class="ratings-summary">
-                <div>
-                    <label for=""><h2><b>Thank you for choosing us!</b></h2></label>
-                   
+
+        <main>
+            <!-- Product Information Section -->
+            <div class="product-info">
+                <div class="product-image">
+                    <img src="../static/products/product.jpg" alt="Product Image" id="product-image">
                 </div>
-                <div>
-                    <label for="">Positive Ratings: {{ data.positive }}</label>
-                    <div class="progress-bar">
-                        <div class="positive-bar" style="width: {{ data.positive }}%"></div>
+                <div class="product-details">
+                    <h1><b>JBL Air-R03 Premium Quality Earbuds (with Free Silicone Case)</h1></b></h1>
+                    <p class="short-description">High-Quality Sounds & Bass Guaranteed.
+                        Large Capacity charging box.
+                        High Noise reduction value.
+                        Support IOS and Android Devices.
+                        In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejoice music with its
+                        Pure Bass, answer phone calls with reduced noise, and its dual connectivity is all you can expect
+                        from truly incredible cordless Headphones like JBL Air R03 With extended battery timings, you can
+                        enjoy your favorite music all day long, and JBL Air R03 offers Pure Bass, making it worth buying!
+                        Brand: JBL.</p>
+                    <div class="price">Rs. 5999.00
+
+                    </div>
+                    <div class="ratings">
+                        <span>⭐⭐⭐⭐⭐ (4.5/5)</span>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="buy-now">Buy Now</button>
                     </div>
                 </div>
-                <br>
-                <div>
-                    <label for="">Negative Ratings: {{ data.negative }}</label>
-                    <div class="progress-bar">
-                        <div class="negative-bar" style="width: {{ data.negative }}%"></div>
+                    <div class="vertical-line"></div>
+            </div>
+
+            <!-- Review Section -->
+            <div class="reviews">
+                <div class="ratings-summary">
+                    <div>
+                        <label for=""><h2><b>Thank you for choosing us!</b></h2></label>
+                    
+                    </div>
+                    <div>
+                        <label for="">Positive Ratings: {{ data.positive }}</label>
+                        <div class="progress-bar">
+                            <div class="positive-bar" style="width: {{ data.positive }}%"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="">Negative Ratings: {{ data.negative }}</label>
+                        <div class="progress-bar">
+                            <div class="negative-bar" style="width: {{ data.negative }}%"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <h3><b>Write Review</b></h3>
+                <h3><b>Write Review</b></h3>
 
-            <!-- Review Form -->
-            <form class="review-form" method="post" id="reviewForm" onsubmit="return validateForm()">
-                <textarea name="text" id="reviewText" placeholder="What do you think of the quality and appearance?"></textarea>
-                <div id="error-message" class="error-message"></div>
-                <button type="submit">Submit Review</button>
-            </form>
+                <!-- Review Form -->
+                <form class="review-form" method="post" id="reviewForm" onsubmit="return validateForm()">
+                    <textarea name="text" id="reviewText" placeholder="What do you think of the quality and appearance?"></textarea>
+                    <div id="error-message" class="error-message"></div>
+                    <button type="submit">Submit Review</button>
+                </form>
 
-            <!-- Display Reviews -->
-            <div class="comments-section">
-                {% for review in data.reviews %}
-                <div class="comment">
-                    <p><strong>{{ review }}</strong></p>
-                    <p class="timestamp">Posted: {{ review.timestamp }}</p>
+                <!-- Display Reviews -->
+                <div class="comments-section">
+                    {% for review in data.reviews %}
+                    <div class="comment">
+                        <p><strong>{{ review }}</strong></p>
+                        <p class="timestamp">Posted: {{ review.timestamp }}</p>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
-        </div>
-    </main>
+        </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Ceylonism.lk. All rights reserved.</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Ceylonism.lk. All rights reserved.</p>
+        </footer>
 
-    <script>
-        function validateForm() {
-            var reviewText = document.getElementById('reviewText').value;
-            var errorMessage = document.getElementById('error-message');
-            if (reviewText.trim() === "") {
-                errorMessage.textContent = "Review cannot be empty!";
-                return false;
-            } else if (reviewText.length < 20) {
-                errorMessage.textContent = "Review must be at least 20 characters long!";
-                return false;
+        <script>
+            function validateForm() {
+                var reviewText = document.getElementById('reviewText').value;
+                var errorMessage = document.getElementById('error-message');
+                if (reviewText.trim() === "") {
+                    errorMessage.textContent = "Review cannot be empty!";
+                    return false;
+                } else if (reviewText.length < 20) {
+                    errorMessage.textContent = "Review must be at least 20 characters long!";
+                    return false;
+                }
+                return true;
             }
-            return true;
-        }
-    </script>
+        </script>
 
-</body>
+    </body>
 
 </html>
