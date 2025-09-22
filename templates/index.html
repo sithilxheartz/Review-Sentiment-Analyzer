@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>JBL Air-R03 Premium Quality Earbuds (with Free Silicone Case)</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+        background-color: #004aad;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 30px;
+        align-items: center;
+    }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-image {
+            width: 200px; /* Adjust the size of the image */
+            height: 45px; /* Adjust the size of the image */
+            margin-right: 10px; /* Spacing between logo image and text */
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            width: 400px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .search-icon {
+            margin-left: 10px; /* Space between input field and search icon */
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-info {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .product-image img {
+            width: 350px; /* Adjust the size of the image */
+            height: 470px; /* Adjust the size of the image */
+
+            border-radius: 10px;
+        }
+
+        .product-details {
+            padding-left: 30px;
+            max-width: 50%;
+        }
+
+        .product-details h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .short-description {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .ratings {
+            margin-bottom: 15px;
+        }
+
+        .quick-actions button {
+            background-color: #0044cc;
+            color: white;
+            padding: 10px;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .quick-actions button:hover {
+            background-color: #0033a1;
+        }
+
+        .reviews {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .reviews .ratings-summary {
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+            height: 10px;
+        }
+
+        .positive-bar {
+            background-color: #4caf50;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .negative-bar {
+            background-color: #f44336;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            height: 100px;
+        }
+
+        .review-form button {
+            padding: 10px 20px;
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .review-form button:hover {
+            background-color: #0033a1;
+        }
+
+        .comments-section {
+            margin-top: 30px;
+        }
+
+        .comment {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment .timestamp {
+            font-size: 12px;
+            color: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #0044cc;
+            color: white;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+<header>
+    <div class="logo">
+        <img src="../static/products/weblogo.png" alt="Daraz Logo" class="logo-image">
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="🔍 Search for products...">
+    </div>
+    <div class="cart-icon">
+        <span>🛒 (6 Items)</span>
+    </div>
+</header>
+
+
+    <main>
+        <!-- Product Information Section -->
+        <div class="product-info">
+            <div class="product-image">
+                <img src="../static/products/product.jpg" alt="Product Image" id="product-image">
+            </div>
+            <div class="product-details">
+                <h1>JBL Air-R03 Premium Quality Earbuds (with Free Silicone Case)</h1>
+                <p class="short-description">High-Quality Sounds & Bass Guaranteed.
+Large Capacity charging box.
+High Noise reduction value.
+Support IOS and Android Devices.
+In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejoice music with its Pure Bass, answer phone calls with reduced noise, and its dual connectivity is all you can expect from truly incredible cordless Headphones like JBL Air R03 With extended battery timings, you can enjoy your favorite music all day long, and JBL Air R03 offers Pure Bass, making it worth buying! Brand: JBL.</p>
+                <div class="price">Rs. 5999.00
+
+                </div>
+                <div class="ratings">
+                    <span>⭐⭐⭐⭐⭐ (4.5/5)</span>
+                </div>
+                <div class="quick-actions">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="reviews">
+            <div class="ratings-summary">
+                <div>
+                    <label for="">Positive Ratings: {{ data.positive }}</label>
+                    <div class="progress-bar">
+                        <div class="positive-bar" style="width: {{ data.positive }}%"></div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <label for="">Negative Ratings: {{ data.negative }}</label>
+                    <div class="progress-bar">
+                        <div class="negative-bar" style="width: {{ data.negative }}%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Review the "JBL Air-R03 Premium Quality Earbuds"</h3>
+
+            <!-- Review Form -->
+            <form class="review-form" method="post" id="reviewForm" onsubmit="return validateForm()">
+                <textarea name="text" id="reviewText" placeholder="Write your a review here..."></textarea>
+                <div id="error-message" class="error-message"></div>
+                <button type="submit">Submit Review</button>
+            </form>
+
+            <!-- Display Reviews -->
+            <div class="comments-section">
+                {% for review in data.reviews %}
+                    <div class="comment">
+                        <p><strong>{{ review }}</strong></p>
+                        <p class="timestamp">Posted: {{ review.timestamp }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BuySL.lk. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var reviewText = document.getElementById('reviewText').value;
+            var errorMessage = document.getElementById('error-message');
+            if (reviewText.trim() === "") {
+                errorMessage.textContent = "Review cannot be empty!";
+                return false;
+            } else if (reviewText.length < 10) {
+                errorMessage.textContent = "Review must be at least 10 characters long!";
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
