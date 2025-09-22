@@ -7,7 +7,7 @@ app = Flask (__name__)
 logging.info('Flask server started')
 
 data = dict()
-reviews = ['Good Condition & Excellent Product ❤️', 'Not as Expected','Actually didn’t expect it to be this good. My main purpose in buying this was to listen to songs and the quality when it comes to listening to songs is really good.']
+reviews = ['Good Quality & Excellent Product ❤️','Actually didn’t expect it to be this good. My main purpose in buying this was to listen to songs and the quality when it comes to listening to songs is really good.', 'Not as Expected']
 positive = 78
 negative = 4
 

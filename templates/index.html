@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>JBL Air-R03 Premium Quality Earbuds (with Free Silicone Case)</title>
     <style>
         /* General Reset */
@@ -21,13 +23,13 @@
         }
 
         header {
-        background-color: #004aad;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        padding: 12px 30px;
-        align-items: center;
-    }
+            background-color: #004aad;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 30px;
+            align-items: center;
+        }
 
         .logo {
             display: flex;
@@ -37,9 +39,12 @@
         }
 
         .logo-image {
-            width: 200px; /* Adjust the size of the image */
-            height: 60px; /* Adjust the size of the image */
-            margin-right: 10px; /* Spacing between logo image and text */
+            width: 200px;
+            /* Adjust the size of the image */
+            height: 60px;
+            /* Adjust the size of the image */
+            margin-right: 10px;
+            /* Spacing between logo image and text */
         }
 
         .search-bar {
@@ -55,7 +60,8 @@
         }
 
         .search-icon {
-            margin-left: 10px; /* Space between input field and search icon */
+            margin-left: 10px;
+            /* Space between input field and search icon */
             font-size: 20px;
             cursor: pointer;
         }
@@ -78,8 +84,10 @@
         }
 
         .product-image img {
-            width: 350px; /* Adjust the size of the image */
-            height: 470px; /* Adjust the size of the image */
+            width: 350px;
+            /* Adjust the size of the image */
+            height: 470px;
+            /* Adjust the size of the image */
 
             border-radius: 10px;
         }
@@ -118,7 +126,7 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s;
-        } 
+        }
 
         .quick-actions button {
             background-color: #0044cc;
@@ -223,23 +231,24 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
-<header>
-    <div class="logo">
-        <img src="../static/products/weblogo.png" alt="Daraz Logo" class="logo-image">
-    </div>
-    <div class="search-bar">
-        <input type="text" placeholder="🔍 Search for Products">
-    </div>
-    <div class="cart-icon">
-      
- <div class="quick-actions1">
-                    <button class="add-to-cart">🛒 Cart</button>
-                </div>
-    </div>
-</header>
+    <header>
+        <div class="logo">
+            <img src="../static/products/weblogo.png" alt="Daraz Logo" class="logo-image">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Search for Products">
+        </div>
+        <div class="cart-icon">
+
+            <div class="quick-actions1">
+                <button class="add-to-cart">🛒 Cart</button>
+            </div>
+        </div>
+    </header>
 
 
     <main>
@@ -251,10 +260,14 @@
             <div class="product-details">
                 <h1>JBL Air-R03 Premium Quality Earbuds (with Free Silicone Case)</h1>
                 <p class="short-description">High-Quality Sounds & Bass Guaranteed.
-Large Capacity charging box.
-High Noise reduction value.
-Support IOS and Android Devices.
-In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejoice music with its Pure Bass, answer phone calls with reduced noise, and its dual connectivity is all you can expect from truly incredible cordless Headphones like JBL Air R03 With extended battery timings, you can enjoy your favorite music all day long, and JBL Air R03 offers Pure Bass, making it worth buying! Brand: JBL.</p>
+                    Large Capacity charging box.
+                    High Noise reduction value.
+                    Support IOS and Android Devices.
+                    In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejoice music with its
+                    Pure Bass, answer phone calls with reduced noise, and its dual connectivity is all you can expect
+                    from truly incredible cordless Headphones like JBL Air R03 With extended battery timings, you can
+                    enjoy your favorite music all day long, and JBL Air R03 offers Pure Bass, making it worth buying!
+                    Brand: JBL.</p>
                 <div class="price">Rs. 5999.00
 
                 </div>
@@ -272,6 +285,10 @@ In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejo
         <div class="reviews">
             <div class="ratings-summary">
                 <div>
+                    <label for=""><h2><b>Thank you for choosing us!</b></h2></label>
+                   
+                </div>
+                <div>
                     <label for="">Positive Ratings: {{ data.positive }}</label>
                     <div class="progress-bar">
                         <div class="positive-bar" style="width: {{ data.positive }}%"></div>
@@ -286,11 +303,11 @@ In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejo
                 </div>
             </div>
 
-            <h3>Review the "JBL Air-R03 Premium Quality Earbuds"</h3>
+            <h3><b>Write Review</b></h3>
 
             <!-- Review Form -->
             <form class="review-form" method="post" id="reviewForm" onsubmit="return validateForm()">
-                <textarea name="text" id="reviewText" placeholder="Write your a review here..."></textarea>
+                <textarea name="text" id="reviewText" placeholder="What do you think of the quality and appearance?"></textarea>
                 <div id="error-message" class="error-message"></div>
                 <button type="submit">Submit Review</button>
             </form>
@@ -298,10 +315,10 @@ In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejo
             <!-- Display Reviews -->
             <div class="comments-section">
                 {% for review in data.reviews %}
-                    <div class="comment">
-                        <p><strong>{{ review }}</strong></p>
-                        <p class="timestamp">Posted: {{ review.timestamp }}</p>
-                    </div>
+                <div class="comment">
+                    <p><strong>{{ review }}</strong></p>
+                    <p class="timestamp">Posted: {{ review.timestamp }}</p>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -328,4 +345,5 @@ In-Ear Comfort.Engage yourself in the world of innovation with JBL Air R03. Rejo
     </script>
 
 </body>
+
 </html>
