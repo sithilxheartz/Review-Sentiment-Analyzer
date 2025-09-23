@@ -6,10 +6,6 @@ The **Product Review Sentiment Analysis Model** is designed to automate the anal
 
 ---
 
-![Product Review Sentiment](WebScreenShot1.png)
-
----
-
 ## ✨ **Key Features**
 
 ✅ **Automated Sentiment Analysis**  
